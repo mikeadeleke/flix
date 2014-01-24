@@ -30,7 +30,7 @@
   
   <%= link_to pluralize(@movie.reviews.size, "review"), 
             movie_reviews_path(@movie) %>
-  
+
   <footer>
     <nav>
       <%= link_to 'Edit', edit_movie_path(@movie), class: 'button' %>
@@ -38,5 +38,9 @@
                   class: 'button',
                   method: :delete, data: { confirm: 'Are you sure?' } %>
     </nav>
+  </footer>
+  <footer>
+  <%= link_to "Write Review", new_movie_review_path(@movie), 
+               class: 'button ok review' %>
   </footer>
 </article>
